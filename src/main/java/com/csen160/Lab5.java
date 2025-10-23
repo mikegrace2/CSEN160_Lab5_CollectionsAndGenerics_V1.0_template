@@ -2,7 +2,7 @@ package com.csen160;
 
 import java.util.*;
 
-public class Main {
+public class Lab5 {
 
     // 1. Base class
     static class RecyclableItem {
@@ -169,5 +169,4 @@ public class Main {
     public static <E> void printGenericList(List<E> list) {
         // TODO: print each element on a new line
     }
-
 }
