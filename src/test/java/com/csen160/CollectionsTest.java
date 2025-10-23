@@ -42,7 +42,7 @@ public class CollectionsTest {
 
         double t1 = s.calculateProcessingTime(100);
         double t2 = s.calculateProcessingTime(100, 2);
-        double t3 = s.calculateProcessingTime(100, 2, 0.5);
+        double t3 = s.calculateProcessingTime(100, 2, 2);
 
         System.out.println("Times: " + t1 + " / " + t2 + " / " + t3);
         assertTrue(t1 > t2 && t2 > t3);

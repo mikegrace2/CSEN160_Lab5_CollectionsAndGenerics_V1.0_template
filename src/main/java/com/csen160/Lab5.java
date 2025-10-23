@@ -125,6 +125,10 @@ public class Lab5 {
     static class Bin {
         private ArrayList<RecyclableItem> items = new ArrayList<>();
 
+        public Bin() {}
+
+        public Bin(ArrayList<RecyclableItem> items) {this.items = items;}
+
         public void addItem(RecyclableItem item) {
             items.add(item);
         }
@@ -148,6 +152,14 @@ public class Lab5 {
             System.out.println("Backward:");
             // TODO: print all items backward
         }
+
+        public ArrayList<RecyclableItem> getItems() {
+            return items;
+        }
+
+        public void setItems(ArrayList<RecyclableItem> items) {
+            this.items = items;
+        }
     }
 
     // 6. Comparators
@@ -169,4 +181,45 @@ public class Lab5 {
     public static <E> void printGenericList(List<E> list) {
         // TODO: print each element on a new line
     }
+
+    public static void main(String[] args) {
+        // // Test items
+        // RecyclableItem paper = new RecyclableItem("Paper", 0.2, 40);
+        // PlasticItem bottle = new PlasticItem("Bottle", 0.3, 60, true);
+        // MetalItem can = new MetalItem("Can", 0.4, 50, "Aluminum");
+        // System.out.println(paper.toString() + " -> impact=" + paper.getImpact());
+        // System.out.println(bottle.toString() + " -> impact=" + bottle.getImpact());
+        // System.out.println(can.toString() + " -> impact=" + can.getImpact());
+        // System.out.println();
+        //
+        // // Test RecyclingStation
+        // RecyclingStation station = new RecyclingStation("Downtown", 1000.0);
+        // station.printStationInfo();
+        // double w = 100.0;
+        // System.out.println("Processing time (weight only): " + station.calculateProcessingTime(w));
+        // System.out.println("Processing time (weight, workers=4): " + station.calculateProcessingTime(w, 4));
+        // System.out.println("Processing time (weight, workers=4, efficiency=0.8): " + station.calculateProcessingTime(w, 4, 0.8));
+        // System.out.println();
+        //
+        // // Test Bin
+        // Bin bin = new Bin();
+        // bin.addItem(paper);
+        // bin.addItem(bottle);
+        // bin.addItem(can);
+        // System.out.println("Bin total impact: " + bin.totalImpact());
+        // bin.printItems();
+        // System.out.println();
+        //
+        // // Test sorting with comparators
+        // System.out.println("Sorted by weight (ascending):");
+        // Collections.sort(bin.getItems(), new WeightComparator());
+        // printGenericList(bin.getItems());
+        // System.out.println();
+        //
+        // System.out.println("Sorted by score (descending):");
+        // Collections.sort(bin.getItems(), new ScoreComparator());
+        // printGenericList(bin.getItems());
+        // System.out.println();
+    }
+
 }
