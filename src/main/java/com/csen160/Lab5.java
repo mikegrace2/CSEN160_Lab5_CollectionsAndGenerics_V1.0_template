@@ -106,7 +106,7 @@ public class Lab5 {
             System.out.println("Station[" + location + ", Capacity=" + maxCapacity + "]");
         }
 
-        // TODO: adjust formulas
+        // TODO: adjust last formula
         public double calculateProcessingTime(double weight) {
             return weight * 0.5;
         }
